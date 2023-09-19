@@ -1,0 +1,123 @@
+/* Estilos para el componente Footer */
+footer {
+  background-color: #0a0a0a;
+  color: white;
+  padding: 0rem 0;
+  text-align: center;
+  margin-bottom: -3px;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+
+    .footer-about,
+    .footer-social,
+    .footer-contact {
+      flex: 1;
+      text-align: center;
+      margin: 1rem;
+
+      p {
+        font-size: 1rem;
+        margin: 0;
+      }
+
+      .icons1 {
+        display: flex;
+        justify-content: center;
+      }
+
+      .sobre {
+        padding-top: 5px;
+        padding-left: 10px;
+        font-size: 1.5rem;
+      }
+
+      
+    
+    
+    
+    }
+
+    .footer-social {
+      .footer-social--icons {
+        display: flex;
+        justify-content: center;
+
+        .icons {
+          font-size: 2rem;
+          margin: 0.5rem;
+          color: white;
+
+          &:hover {
+            color: #03bcf4;
+          }
+        }
+      }
+    }
+
+    .footer-contact {
+      h3 {
+        font-size: 1.25rem;
+        margin: 0;
+      }
+    }
+  }
+
+  .footer-bottom--section {
+    hr {
+      border-color: white;
+      opacity: 0.5;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+
+      p {
+        font-size: 1rem;
+        margin: 0;
+      }
+
+      div {
+        p {
+          margin: 0.5rem 1rem;
+          font-size: 0.9rem;
+          cursor: pointer;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: #03bcf4;
+          }
+        }
+      }
+    }
+  }
+
+  // Media query para dispositivos móviles
+  @media (max-width: 768px) {
+    .container {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      flex-direction: column;
+
+      gap: 2rem;
+
+      .footer-about,
+      .footer-social,
+      .footer-contact {
+        margin: 0;
+        text-align: center;
+      }
+    }
+  }
+}

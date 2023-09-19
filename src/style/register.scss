@@ -1,0 +1,80 @@
+/* Estilos CSS para el componente de registro */
+
+.custom-container-register {
+    width: 400px;
+    max-width: 500px;
+    max-height: 600px;
+    margin: auto;
+    padding: 2rem;
+    background: linear-gradient(to bottom, #111111, #1b1b1b);
+    box-shadow: 0px 0px 10px rgba(27, 20, 20, 0.5);
+    color: #fafafa;
+    text-align: center;
+    border: 4px solid #fff;
+    border-radius: 10px;
+  }
+  
+  .login-register-container-register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .form-field-wrapper-register {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .label-register {
+    font-weight: bold;
+  }
+  
+  .input-register[type="text"],
+  .input-register[type="email"],
+  .input-register[type="password"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    background-color: #111111;
+    color: #fafafa;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    margin-top: 7px;
+  }
+  
+  .btn-register {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #1b1b1b;
+    color: #fafafa;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    border-radius: 10px;
+    border: 2px solid #fff;
+  }
+  
+  .btn-register:hover {
+    background-color: #0a0a0a;
+    color: #03bcf4;
+  }
+  
+  .label-register {
+    font-size: 1.3rem;
+  }
+  
+  .toregis {
+    text-decoration: underline;
+    color: #fafafa;
+    cursor: pointer;
+  }
+  
+
+  .profile-back{
+    background: linear-gradient(to bottom, #111111, #1b1b1b);
+    box-shadow: 0px 0px 10px rgba(27, 20, 20, 0.5);
+    padding: 50px;
+    padding-bottom: 100px;
+
+}

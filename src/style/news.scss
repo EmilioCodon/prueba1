@@ -1,0 +1,120 @@
+.detres {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  @media screen and (max-width: 1160px) {
+    grid-template-columns: repeat(1, 1fr);
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.nameUS {
+  padding-bottom: 30px;
+}
+
+.news-container {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.news-item {
+  background: linear-gradient(to bottom, #111111, #1b1b1b);
+  box-shadow: 0px 0px 10px rgba(27, 20, 20, 0.5);
+  color: #fafafa;
+  text-align: center;
+  border: 4px solid #fff;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+
+  .new-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    @media screen and (max-width: 1160px) {
+      max-width: 95%; // Cambia el tamaño de la imagen en una sola columna
+    }
+  }
+
+  .new-author {
+    font-size: 14px;
+    color: #555;
+  }
+
+  .new-title {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  .new-content {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .new-link {
+    display: block;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+    color: white;
+
+    &:hover {
+      color: #03bcf4;
+    }
+  }
+}
+
+.custom-title2 {
+  white-space: nowrap;
+  background: 50% 100% / 50% 50% no-repeat
+    radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  font-size: 50px;
+  animation: reveal 3000ms ease-in-out forwards 200ms,
+    glow 2500ms linear infinite 2000ms;
+
+  @keyframes reveal {
+    80% {
+      letter-spacing: 8px;
+    }
+    100% {
+      background-size: 300% 300%;
+    }
+  }
+  @keyframes glow {
+    40% {
+      text-shadow: 0 0 8px #fff;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    /* Define nuevos keyframes para pantallas más pequeñas */
+    @keyframes reveal {
+      80% {
+        letter-spacing: 1px; /* Ajusta el letter-spacing para pantallas más pequeñas */
+      }
+    }
+
+    /* Aplica los nuevos keyframes en la animación */
+    animation: reveal 3000ms ease-in-out forwards 200ms,
+      glow 2500ms linear infinite 2000ms;
+
+    font-size: 35px; /* Cambia el tamaño de fuente para pantallas más pequeñas */
+  }
+ 
+}

@@ -1,0 +1,478 @@
+/* Estilos para el componente Users */
+/* .row {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  
+    .col-md-4 {
+      padding: 2rem;
+      background-color: #f5f5f5;
+      border-radius: 0.5rem;
+      margin-right: 2rem;
+      margin-top: 0rem;
+      width: 30%; 
+    }
+  
+    .col-md-6 {
+      padding: 2rem;
+      background-color: #f5f5f5;
+      border-radius: 0.5rem;
+      width: 60%; 
+    }
+  
+    .card {
+      border: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+  
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+  
+    .form-control {
+      border-radius: 0.25rem;
+      border: 1px solid #d1d1d1;
+      padding: 0.75rem;
+      font-size: 1rem;
+    }
+  
+    .btn-primary {
+      border-radius: 0.25rem;
+      background-color: #007bff;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  
+    .table {
+      border: none;
+      background-color: white;
+      border-collapse: collapse;
+      width: 100%;
+  
+      th,
+      td {
+        border-top: none;
+        padding: 1rem;
+        text-align: center;
+      }
+  
+      th {
+        background-color: #f5f5f5;
+        font-size: 1.1rem;
+        font-weight: bold;
+      }
+  
+      td {
+        vertical-align: middle;
+        font-size: 1rem;
+      }
+  
+      .btn-secondary,
+      .btn-danger {
+        border-radius: 0.25rem;
+        padding: 0.25rem 0.5rem;
+        font-size: 0.9rem;
+        margin: 0.25rem;
+      }
+    }
+  } */
+
+/* Estilos para el componente Users */
+/* .row {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+
+  .col-md-4 {
+    padding: 2rem;
+    margin-right: 2rem;
+    height: 50%;
+    width: 25%; 
+    background: linear-gradient(to bottom, #111111, #1b1b1b);
+    box-shadow: 0px 0px 10px rgba(27, 20, 20, 0.5);
+    color: #fafafa;
+    text-align: left;
+    border: 4px solid #fff;
+    border-radius: 10px;
+  }
+
+  .col-md-6 {
+    padding: 0.1rem;
+    width: 60%; 
+    background: linear-gradient(to bottom, #111111, #1b1b1b);
+    box-shadow: 0px 0px 10px rgba(27, 20, 20, 0.5);
+    color: #fafafa;
+    text-align: center;
+    border: 4px solid #fff;
+    border-radius: 10px;
+
+  }
+
+  .card {
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-control {
+    border-radius: 0.25rem;
+    border: 1px solid #d1d1d1;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: bolder;
+    width: 100%;
+    background-color: #161515;
+    color: #fafafa;
+  }
+
+
+  .table {
+    
+    border-collapse: collapse;
+    width: 100%;
+    
+
+
+    
+    th {
+      background-color:darken(#03bcf4, 45%); 
+      color:#03bcf4;
+      font-size: larger;
+      font-weight: bold; 
+
+    }
+   
+    th,
+    td {
+      
+      border-top: none;
+      padding: 1rem;
+      text-align: center;
+      font-weight: bolder;
+      
+      
+    }
+
+    th {
+      font-size: 1.3rem;
+      font-weight: bolder;
+    }
+
+    td {
+      vertical-align: middle;
+      font-size: 1rem;
+      
+    }
+    
+    tr:nth-child(even) {
+      background-color: #252525; 
+      
+     
+    }
+  
+  
+  }
+
+  .button2 {
+    display: inline-block;
+    padding: .5rem 1rem;
+    border-radius: 3rem;
+    color:  #03bcf4;
+    font-weight: bolder;
+    font-size: 0.8rem;
+    letter-spacing: .15rem;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin: 0.2rem;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  
+      background-color: darken(#03bcf4, 45%);
+      border-radius: 5rem;
+      z-index: -2;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      
+      background-color: #03bcf4; 
+      transition: all .3s;
+      border-radius: 5rem;
+      z-index: -1;
+    }
+    &:hover {
+      color: #03bcf4;
+      color:#030000;
+      font-weight: bolder;
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+}
+ */
+.row {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+
+  .col-md-4 {
+    padding: 2rem;
+    margin-right: 2rem;
+    height: 50%;
+    width: 25%;
+    background: linear-gradient(to bottom, #111111, #1b1b1b);
+    box-shadow: 0px 0px 10px rgba(27, 20, 20, 0.5);
+    color: #fafafa;
+    text-align: left;
+    border: 4px solid #fff;
+    border-radius: 10px;
+  }
+
+  .col-md-6 {
+    padding: 0.1rem;
+    width: 60%;
+    background: linear-gradient(to bottom, #111111, #1b1b1b);
+    box-shadow: 0px 0px 10px rgba(27, 20, 20, 0.5);
+    color: #fafafa;
+    text-align: center;
+    border: 4px solid #fff;
+    border-radius: 10px;
+  }
+
+  .card {
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-control {
+    border-radius: 0.25rem;
+    border: 1px solid #d1d1d1;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: bolder;
+    width: 100%;
+    background-color: #161515;
+    color: #fafafa;
+  }
+
+  .table {
+    border-collapse: collapse;
+    width: 100%;
+
+    th {
+      background-color: darken(#03bcf4, 45%);
+      color: #03bcf4;
+      font-size: larger;
+      font-weight: bold;
+      width: auto;
+    }
+
+    th,
+    td {
+      border-top: none;
+      padding: 1rem;
+      text-align: center;
+      font-weight: bolder;
+      width: auto;
+      
+      
+    }
+
+    th {
+      font-size: 1.3rem;
+      font-weight: bolder;
+    }
+
+    td {
+      vertical-align: middle;
+      font-size: 1rem;
+    }
+
+    tr:nth-child(even) {
+      background-color: #252525;
+    }
+  }
+
+  .button3 {
+    display: block; /* Cambiamos a display block */
+    margin: 0.2rem auto; /* Centramos horizontalmente usando margin */
+    padding: .75rem 1.25rem;
+    border-radius: 5rem;
+    color: #03bcf4;
+    font-weight: bolder;
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: darken(#03bcf4, 45%);
+      border-radius: 5rem;
+      z-index: -2;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background-color: #03bcf4;
+      transition: all 0.3s;
+      border-radius: 5rem;
+      z-index: -1;
+    }
+
+    &:hover {
+      color: #03bcf4;
+      color: #030000;
+      font-weight: bolder;
+
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+
+
+  .button2 {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 3rem;
+    color: #03bcf4;
+    font-weight: bolder;
+    font-size: 0.8rem;
+    letter-spacing: 0.15rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin: 0.2rem;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: darken(#03bcf4, 45%);
+      border-radius: 5rem;
+      z-index: -2;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background-color: #03bcf4;
+      transition: all 0.3s;
+      border-radius: 5rem;
+      z-index: -1;
+    }
+
+    &:hover {
+      color: #03bcf4;
+      color: #030000;
+      font-weight: bolder;
+
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1065px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    
+    .col-md-4 {
+      padding: 1rem;
+      margin: auto;
+
+      height: 100%;
+      width: 60%;
+    }
+    .col-md-6 {
+      width: 90%; /* Cambiar a ancho completo en dispositivos más pequeños */
+      margin: auto; /* Eliminar margen derecho en dispositivos más pequeños */
+      
+     
+    }
+
+    .table-wrapper {
+      overflow-x: auto; /* Agregar desplazamiento horizontal a la tabla */
+    }
+
+   
+  }
+
+
+  @media only screen and (max-width: 650px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    
+    .col-md-4 {
+      padding: 1rem;
+      margin: auto;
+
+      height: 100%;
+      width: 80%;
+    }
+    .col-md-6 {
+      width: 80%; /* Cambiar a ancho completo en dispositivos más pequeños */
+      margin: auto; /* Eliminar margen derecho en dispositivos más pequeños */
+      
+     td{
+      padding: 0%;
+      width: auto;
+     }
+    }
+
+    .table-wrapper {
+      overflow-x: auto; /* Agregar desplazamiento horizontal a la tabla */
+    }
+
+   
+  }
+}
