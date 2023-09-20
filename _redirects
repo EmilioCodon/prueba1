@@ -1,1 +1,1 @@
-/api/news/*  https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=d766bc99f3834102b779f9296aabaf73/:splat  200
+/news/*  https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=d766bc99f3834102b779f9296aabaf73/:splat  200
