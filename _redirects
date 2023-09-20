@@ -1,1 +1,1 @@
-/news  /Blog
+/api/news/*  /api/news/:splat  200

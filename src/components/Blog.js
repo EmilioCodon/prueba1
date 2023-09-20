@@ -12,8 +12,7 @@ state = {
   }
 
   consultaNoticias = () => {
-    /* let url = 'https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=d766bc99f3834102b779f9296aabaf73'; */
-    let url = '/api/news';
+    let url = 'https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=d766bc99f3834102b779f9296aabaf73';
 
     fetch(url)
       .then(respuesta => {
