@@ -1,4 +1,4 @@
 [[redirects]]
 from = "/news"
-to = "Blog"
+to = "/Blog"
 status = 200
