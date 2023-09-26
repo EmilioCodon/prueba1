@@ -16,7 +16,7 @@ export const Users = () => {
     e.preventDefault();
     if (!editing) {
       const res = await fetch(
-        `https://ubiquitous-crostata-c9a03d.netlify.app/users`,
+        `https://emiliocodon.pythonanywhere.com/users`,
         {
           method: "POST",
           credentials: "include",
@@ -33,7 +33,7 @@ export const Users = () => {
       await res.json();
     } else {
       const res = await fetch(
-        `https://ubiquitous-crostata-c9a03d.netlify.app/user/${id}`,
+        `https://emiliocodon.pythonanywhere.com/user/${id}`,
         {
           method: "PUT",
           credentials: "include",
@@ -60,38 +60,21 @@ export const Users = () => {
     nameInput.current.focus();
   };
 
-  /*   const getUsers = async () => {
-    const res = await fetch(`https://ubiquitous-crostata-c9a03d.netlify.app/users`, {
+     const getUsers = async () => {
+    const res = await fetch(`https://emiliocodon.pythonanywhere.com/users`, {
       method: "GET",
       credentials: "include",
     });
     const data = await res.json();
     setUsers(data);
-  }; */
+  }; 
 
-  const getUsers = async () => {
-    const res = await fetch(
-      `https://ubiquitous-crostata-c9a03d.netlify.app/users`,
-      {
-        method: "GET",
-        credentials: "include",
-      }
-    );
-
-    if (res.status === 200) {
-      const data = await res.json();
-      setUsers(data);
-    } else {
-      // Manejo de error
-      console.error("Error en la solicitud");
-    }
-  };
 
   const deleteUser = async (id) => {
     const userResponse = window.confirm("Are you sure you want to delete it?");
     if (userResponse) {
       const res = await fetch(
-        `https://ubiquitous-crostata-c9a03d.netlify.app/user/${id}`,
+        `https://emiliocodon.pythonanywhere.com/user/${id}`,
         {
           method: "DELETE",
           credentials: "include",
@@ -157,7 +140,7 @@ export const Users = () => {
 
   const editUser = async (id) => {
     const resp = await fetch(
-      `https://ubiquitous-crostata-c9a03d.netlify.app/user/${id}`,
+      `https://emiliocodon.pythonanywhere.com/user/${id}`,
       {
         method: "GET",
         headers: {
