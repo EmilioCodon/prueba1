@@ -15,21 +15,18 @@ export const Users = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!editing) {
-      const res = await fetch(
-        `https://emiliocodon.pythonanywhere.com/users`,
-        {
-          method: "POST",
-          credentials: "include",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            name,
-            email,
-            password,
-          }),
-        }
-      );
+      const res = await fetch(`https://emiliocodon.pythonanywhere.com/users`, {
+        method: "POST",
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          password,
+        }),
+      });
       await res.json();
     } else {
       const res = await fetch(
@@ -60,17 +57,16 @@ export const Users = () => {
     nameInput.current.focus();
   };
 
-     const getUsers = async () => {
+  const getUsers = async () => {
     const res = await fetch(`https://emiliocodon.pythonanywhere.com/users`, {
       method: "GET",
       credentials: "include",
     });
     const data = await res.json();
     setUsers(data);
-  }; 
+  };
 
-
-  const deleteUser = async (id) => {
+/*   const deleteUser = async (id) => {
     const userResponse = window.confirm("Are you sure you want to delete it?");
     if (userResponse) {
       const res = await fetch(
@@ -84,7 +80,32 @@ export const Users = () => {
       console.log(data);
       await getUsers();
     }
-  };
+  }; */
+
+
+
+  const deleteUser = async (id) => {
+    // Verifica si 'id' es válido antes de realizar la solicitud DELETE
+    if (id) {
+      const userResponse = window.confirm("Are you sure you want to delete it?");
+      if (userResponse) {
+        const res = await fetch(
+          `https://emiliocodon.pythonanywhere.com/user/${id}`,
+          {
+            method: "DELETE",
+            credentials: "include",
+          }
+        );
+        const data = await res.json();
+        console.log(data);
+        await getUsers();
+      }
+    } else {
+      console.error("ID no válido");
+      // Manejo de error o mensaje de error adecuado
+    }
+};
+
 
   /* const editUser = async (id) => {
     const res = await fetch(`http://localhost:5000/user/${id}`, {
