@@ -129,7 +129,7 @@ export const Users = () => {
   }; */
 
   const editUser = async (id) => {
-    const resp = await fetch(`http://localhost:5000/user/${id}`, {
+    const resp = await fetch(`https://ubiquitous-crostata-c9a03d.netlify.app/user/${id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
