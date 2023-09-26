@@ -85,8 +85,8 @@ export const Users = () => {
 
 
   const deleteUser = async (id) => {
-    // Verifica si 'id' es válido antes de realizar la solicitud DELETE
-    if (id) {
+    // Verifica si 'id' es un valor válido (por ejemplo, un número o una cadena no vacía)
+    if (id !== undefined && id !== null && id !== '') {
       const userResponse = window.confirm("Are you sure you want to delete it?");
       if (userResponse) {
         const res = await fetch(
@@ -102,9 +102,10 @@ export const Users = () => {
       }
     } else {
       console.error("ID no válido");
-      // Manejo de error o mensaje de error adecuado
+      // Puedes mostrar un mensaje de error al usuario aquí
     }
 };
+
 
 
   /* const editUser = async (id) => {
