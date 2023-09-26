@@ -84,61 +84,6 @@ export const Users = () => {
 
 
 
-
-
-
-  /* const editUser = async (id) => {
-    const res = await fetch(`http://localhost:5000/user/${id}`, {
-      method: "PUT",
-      credentials: "include"
-    });
-    const data = await res.json();
-
-    setEditing(true);
-    setId(id);
-
-    // Reset
-    setName(data.name);
-    setEmail(data.email);
-    setPassword(data.password);
-    nameInput.current.focus();
-  }; */
-
-  /*    const editUser = async (id) => {
-    const userResponse = window.confirm("Are you sure you want to edit it?");
-    if (userResponse) {
-      const userToUpdate = {
-        name,
-        email,
-        password,
-      };
-  
-      const res = await fetch(`http://localhost:5000/user/${id}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-        body: JSON.stringify(userToUpdate),
-      });
-  
-      if (res.status === 200) {
-        const data = await res.json();
-        console.log(data);
-        setEditing(true);
-        setId(id);
-        // Reset
-        setName("");
-        setEmail("");
-        setPassword("");
-        
-        await getUsers();
-      } else {
-        console.error(`Error: Could not edit user with ID ${id}`);
-      }
-    }
-  }; */
-
   const editUser = async (id) => {
     const resp = await fetch(
       `https://emiliocodon.pythonanywhere.com/user/${id}`,
@@ -160,38 +105,6 @@ export const Users = () => {
     setPassword(data.password);
     nameInput.current.focus();
 
-    /* const userResponse = window.confirm(
-      "Are you sure you want to edit this user?"
-    );
-    if (userResponse) {
-      const userToUpdate = {
-        name,
-        email,
-        password,
-      };
-
-      const res = await fetch(`http://localhost:5000/user/${id}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-        body: JSON.stringify(userToUpdate),
-      });
-
-      if (res.status === 200) {
-        const data = await res.json();
-        console.log(data);
-
-        // Reset
-        setName("");
-        setEmail("");
-        setPassword("");
-        await getUsers();
-      } else {
-        console.error(`Error: Could not edit user with ID ${id}`);
-      }
-    } */
   };
 
   useEffect(() => {
