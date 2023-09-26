@@ -66,7 +66,7 @@ export const Users = () => {
     setUsers(data);
   };
 
-/*   const deleteUser = async (id) => {
+  const deleteUser = async (id) => {
     const userResponse = window.confirm("Are you sure you want to delete it?");
     if (userResponse) {
       const res = await fetch(
@@ -80,31 +80,10 @@ export const Users = () => {
       console.log(data);
       await getUsers();
     }
-  }; */
+  };
 
 
 
-  const deleteUser = async (id) => {
-    // Verifica si 'id' es un valor válido (por ejemplo, un número o una cadena no vacía)
-    if (id !== undefined && id !== null && id !== '') {
-      const userResponse = window.confirm("Are you sure you want to delete it?");
-      if (userResponse) {
-        const res = await fetch(
-          `https://emiliocodon.pythonanywhere.com/user/${id}`,
-          {
-            method: "DELETE",
-            credentials: "include",
-          }
-        );
-        const data = await res.json();
-        console.log(data);
-        await getUsers();
-      }
-    } else {
-      console.error("ID no válido");
-      // Puedes mostrar un mensaje de error al usuario aquí
-    }
-};
 
 
 
@@ -270,20 +249,20 @@ export const Users = () => {
               </thead>
               <tbody>
                 {users.map((user) => (
-                  <tr key={user._id}>
+                  <tr key={user.id}>
                     <td>{user.name}</td>
                     <td>{user.email}</td>
                     <td>{user.password}</td>
                     <td>
                       <button
                         className="button2"
-                        onClick={(e) => editUser(user._id)}
+                        onClick={(e) => editUser(user.id)}
                       >
                         Edit
                       </button>
                       <button
                         className="button2"
-                        onClick={(e) => deleteUser(user._id)}
+                        onClick={(e) => deleteUser(user.id)}
                       >
                         Delete
                       </button>
