@@ -15,7 +15,7 @@ export const Users = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!editing) {
-      const res = await fetch(`http://localhost:5000/users`, {
+      const res = await fetch(`https://ubiquitous-crostata-c9a03d.netlify.app/users`, {
         method: "POST",
         credentials: "include",
         headers: {
@@ -29,7 +29,7 @@ export const Users = () => {
       });
       await res.json();
     } else {
-      const res = await fetch(`http://localhost:5000/user/${id}`, {
+      const res = await fetch(`https://ubiquitous-crostata-c9a03d.netlify.app/user/${id}`, {
         method: "PUT",
         credentials: "include",
         headers: {
@@ -55,7 +55,7 @@ export const Users = () => {
   };
 
   const getUsers = async () => {
-    const res = await fetch(`http://localhost:5000/users`, {
+    const res = await fetch(`https://ubiquitous-crostata-c9a03d.netlify.app/users`, {
       method: "GET",
       credentials: "include",
     });
@@ -66,7 +66,7 @@ export const Users = () => {
   const deleteUser = async (id) => {
     const userResponse = window.confirm("Are you sure you want to delete it?");
     if (userResponse) {
-      const res = await fetch(`http://localhost:5000/user/${id}`, {
+      const res = await fetch(`https://ubiquitous-crostata-c9a03d.netlify.app/user/${id}`, {
         method: "DELETE",
         credentials: "include",
       });
