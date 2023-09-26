@@ -15,32 +15,38 @@ export const Users = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!editing) {
-      const res = await fetch(`https://ubiquitous-crostata-c9a03d.netlify.app/users`, {
-        method: "POST",
-        credentials: "include",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          email,
-          password,
-        }),
-      });
+      const res = await fetch(
+        `https://ubiquitous-crostata-c9a03d.netlify.app/users`,
+        {
+          method: "POST",
+          credentials: "include",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            email,
+            password,
+          }),
+        }
+      );
       await res.json();
     } else {
-      const res = await fetch(`https://ubiquitous-crostata-c9a03d.netlify.app/user/${id}`, {
-        method: "PUT",
-        credentials: "include",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          email,
-          password,
-        }),
-      });
+      const res = await fetch(
+        `https://ubiquitous-crostata-c9a03d.netlify.app/user/${id}`,
+        {
+          method: "PUT",
+          credentials: "include",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            email,
+            password,
+          }),
+        }
+      );
       const data = await res.json();
       console.log(data);
       setEditing(false);
@@ -54,22 +60,43 @@ export const Users = () => {
     nameInput.current.focus();
   };
 
-  const getUsers = async () => {
+  /*   const getUsers = async () => {
     const res = await fetch(`https://ubiquitous-crostata-c9a03d.netlify.app/users`, {
       method: "GET",
       credentials: "include",
     });
     const data = await res.json();
     setUsers(data);
+  }; */
+
+  const getUsers = async () => {
+    const res = await fetch(
+      `https://ubiquitous-crostata-c9a03d.netlify.app/users`,
+      {
+        method: "GET",
+        credentials: "include",
+      }
+    );
+
+    if (res.status === 200) {
+      const data = await res.json();
+      setUsers(data);
+    } else {
+      // Manejo de error
+      console.error("Error en la solicitud");
+    }
   };
 
   const deleteUser = async (id) => {
     const userResponse = window.confirm("Are you sure you want to delete it?");
     if (userResponse) {
-      const res = await fetch(`https://ubiquitous-crostata-c9a03d.netlify.app/user/${id}`, {
-        method: "DELETE",
-        credentials: "include",
-      });
+      const res = await fetch(
+        `https://ubiquitous-crostata-c9a03d.netlify.app/user/${id}`,
+        {
+          method: "DELETE",
+          credentials: "include",
+        }
+      );
       const data = await res.json();
       console.log(data);
       await getUsers();
@@ -129,30 +156,25 @@ export const Users = () => {
   }; */
 
   const editUser = async (id) => {
-    const resp = await fetch(`https://ubiquitous-crostata-c9a03d.netlify.app/user/${id}`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      credentials: "include",
-    });
+    const resp = await fetch(
+      `https://ubiquitous-crostata-c9a03d.netlify.app/user/${id}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      }
+    );
 
     const data = await resp.json();
 
-
-    
     setEditing(true);
     setId(id);
     setName(data.name);
     setEmail(data.email);
     setPassword(data.password);
     nameInput.current.focus();
-
-
-
-
-
-      
 
     /* const userResponse = window.confirm(
       "Are you sure you want to edit this user?"
@@ -195,81 +217,79 @@ export const Users = () => {
   return (
     <div className="azul3">
       <h3 className="custom-title2">Leave your visit here</h3>
-    <div className="row">
-      <div className="col-md-4">
-        <form onSubmit={handleSubmit} className="card card-body">
-          <div className="form-group">
-            <input
-              type="text"
-              onChange={(e) => setName(e.target.value)}
-              value={name}
-              className="form-control"
-              placeholder="Name"
-              ref={nameInput}
-              autoFocus
-            />
+      <div className="row">
+        <div className="col-md-4">
+          <form onSubmit={handleSubmit} className="card card-body">
+            <div className="form-group">
+              <input
+                type="text"
+                onChange={(e) => setName(e.target.value)}
+                value={name}
+                className="form-control"
+                placeholder="Name"
+                ref={nameInput}
+                autoFocus
+              />
+            </div>
+            <div className="form-group">
+              <input
+                type="email"
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
+                className="form-control"
+                placeholder="User's Email"
+              />
+            </div>
+            <div className="form-group">
+              <input
+                type="text"
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
+                className="form-control"
+                placeholder="User's Enterprise"
+              />
+            </div>
+            <button className="button3">{editing ? "Update" : "Create"}</button>
+          </form>
+        </div>
+        <div className="col-md-6">
+          <div className="table-wrapper ">
+            <table className="table table-striped">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Enterprise</th>
+                  <th>Operations</th>
+                </tr>
+              </thead>
+              <tbody>
+                {users.map((user) => (
+                  <tr key={user._id}>
+                    <td>{user.name}</td>
+                    <td>{user.email}</td>
+                    <td>{user.password}</td>
+                    <td>
+                      <button
+                        className="button2"
+                        onClick={(e) => editUser(user._id)}
+                      >
+                        Edit
+                      </button>
+                      <button
+                        className="button2"
+                        onClick={(e) => deleteUser(user._id)}
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
-          <div className="form-group">
-            <input
-              type="email"
-              onChange={(e) => setEmail(e.target.value)}
-              value={email}
-              className="form-control"
-              placeholder="User's Email"
-            />
-          </div>
-          <div className="form-group">
-            <input
-              type="text"
-              onChange={(e) => setPassword(e.target.value)}
-              value={password}
-              className="form-control"
-              placeholder="User's Enterprise"
-            />
-          </div>
-          <button className="button3">
-            {editing ? "Update" : "Create"}
-          </button>
-        </form>
-      </div>
-      <div className="col-md-6">
-        <div className="table-wrapper ">
-        <table className="table table-striped">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Enterprise</th>
-              <th>Operations</th>
-            </tr>
-          </thead>
-          <tbody>
-            {users.map((user) => (
-              <tr key={user._id}>
-                <td>{user.name}</td>
-                <td>{user.email}</td>
-                <td>{user.password}</td>
-                <td>
-                  <button
-                    className="button2"
-                    onClick={(e) => editUser(user._id)}
-                  >
-                    Edit
-                  </button>
-                  <button
-                    className="button2"
-                    onClick={(e) => deleteUser(user._id)}
-                  >
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
         </div>
       </div>
-    </div>
     </div>
   );
 };
