@@ -140,9 +140,14 @@
 
 @media screen and (max-width: 415px) {
 
-  .custom-title2 {
-    font-size: 40px;
-  }
+  .row {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    }
 
 
 
