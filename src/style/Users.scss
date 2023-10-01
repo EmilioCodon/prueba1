@@ -300,5 +300,19 @@
     justify-content: center; /* Centra verticalmente el contenido */
     align-items: center;
     padding-top: 1rem;
+
+
+    .col-md-4 {
+     
+
+     
+      width: 95%;
+    }
+    .col-md-6 {
+      width: 95%; /* Cambiar a ancho completo en dispositivos más pequeños */
+      margin: auto; /* Eliminar margen derecho en dispositivos más pequeños */
+      
+     
   }
+}
 }
