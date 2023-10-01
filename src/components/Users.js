@@ -117,7 +117,7 @@ export const Users = () => {
     <div className="azul3">
       {user ? (
         <div>
-          <h3 className="custom-title2">Leave your visit here</h3>
+          <h3 className="custom-title3">Leave your visit here</h3>
           <div className="row">
             <div className="col-md-4">
               <form onSubmit={handleSubmit} className="card card-body">
