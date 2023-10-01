@@ -23,7 +23,7 @@ const steps = [
   1000,
   " self-motivated 📈",
   1000,
-  " continuous learner 📖",
+  " lifelong-learner 📖",
   1000,
 ];
 

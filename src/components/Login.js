@@ -26,7 +26,7 @@ const Login = () => {
   };
 
   return (
-    <div className="azul3">
+    <div className="azul33">
       <div className="custom-container-tu-otro">
         <div className="login-register-container-tu-otro">
           <form onSubmit={handleSubmit} ref={loginForm}>

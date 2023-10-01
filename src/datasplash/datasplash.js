@@ -4,7 +4,7 @@ export const data = [
     name: "PCB Desing",
     category: "electronics",
     image:
-      "https://images.unsplash.com/photo-1592659762303-90081d34b277?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1373&q=80",
+      "https://images.unsplash.com/photo-1651340527836-263c5072968e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80",
     mode: "project",
   },
   {
@@ -20,7 +20,7 @@ export const data = [
     name: "React JS",
     category: "dev",
     image:
-      "https://images.unsplash.com/photo-1627399270231-7d36245355a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80",
+      "https://images.unsplash.com/photo-1575314027842-c33656c1f3dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80",
     mode: "remote",
   },
   {
@@ -44,7 +44,7 @@ export const data = [
     name: "Hardware Projects",
     category: "electronics",
     image:
-      "https://images.unsplash.com/photo-1527356900876-cae61d8d8462?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80",
+      "https://images.unsplash.com/photo-1586126530777-eefae13ebe34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80",
     mode: "project",
   },
   {
@@ -65,11 +65,11 @@ export const data = [
   },
   {
     id: 9,
-    name: "Oscilloscope",
-    category: "engineer",
+    name: "Backend",
+    category: "dev",
     image:
-      "https://images.unsplash.com/photo-1562568068-ea24dcbf3c78?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1474&q=80",
-    mode: "bodily",
+      "https://images.unsplash.com/photo-1572985025310-cc8cafbbf394?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1282&q=80",
+    mode: "remote",
   },
   {
     id: 10,
@@ -84,7 +84,7 @@ export const data = [
     name: "Power Electronics",
     category: "engineer",
     image:
-      "https://images.unsplash.com/photo-1563770660941-20978e870e26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "https://images.unsplash.com/photo-1563456019560-2b37aa7ad890?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1288&q=80",
     mode: "bodily",
   },
   {
@@ -100,7 +100,7 @@ export const data = [
     name: "Microchips",
     category: "electronics",
     image:
-      "https://images.unsplash.com/photo-1494083306499-e22e4a457632?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80",
+      "https://images.unsplash.com/photo-1601541984851-6779505c272c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80",
     mode: "hybrid",
   },
   {
@@ -116,7 +116,7 @@ export const data = [
     name: "Artificial Vision",
     category: "ia",
     image:
-      "https://images.unsplash.com/photo-1563968743333-044cef800494?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1516&q=80",
+      "https://images.unsplash.com/photo-1551281306-0d52288970ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80",
     mode: "hybrid",
   },
   {
@@ -124,7 +124,7 @@ export const data = [
     name: "JavaScript",
     category: "dev",
     image:
-      "https://images.unsplash.com/photo-1592609931095-54a2168ae893?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "https://images.unsplash.com/photo-1576836165612-8bc9b07e7778?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80",
     mode: "remote",
   },
   {

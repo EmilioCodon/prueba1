@@ -78,7 +78,7 @@ body {
   z-index: 1;
   text-align: center;
   margin: 0 1.618em;
-  top: 55%;
+  top: 70%;
   opacity: 0;
   
   h1 {
@@ -92,7 +92,7 @@ body {
 
 .tl-year {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
@@ -141,14 +141,38 @@ body {
 
 
 
-@media (max-width: 1160px) {
+@media (max-width: 630px) {
   /* Estilos para pantallas con un ancho máximo de 768px */
   
   .tl-year {
-    top: 10%; /* Reducir el espacio superior */
+    top: 20%; /* Reducir el espacio superior */
   }
 
   .tl-content {
-    top: 20%; /* Reducir el espacio superior */
+    top: 45%; /* Reducir el espacio superior */
   }
+
+  
+}
+
+
+@media (max-width: 768px) {
+  .tl-content h1 {
+    text-transform: none;
+    font-weight: bolder;
+    font-size: 1.1rem;
+  }
+}
+
+
+@media screen and (max-width: 415px) {
+
+  .tl-content h1 {
+  font-size: 0.8rem;
+  }
+
+  .tl-content p{
+    font-size: 0.8rem;
+  }
+
 }

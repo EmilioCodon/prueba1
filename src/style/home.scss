@@ -1,246 +1,219 @@
-/* .caca{
-
-
-font-size: 3rem;
-font-weight: bold;
-}
-
-.fotoemo{
-
-    height: 40vmin;
-    border-radius: 50%;
-    border: 1vh solid #232d3622;
-
-
-} */
-
-.azul2{
-    background-image: url('fondo-azul-degradado.jpg'); // Reemplaza 'tu-imagen-de-fondo.jpg' con la URL de tu imagen
-    background-size: cover; // Ajusta el tamaño de la imagen de fondo
-    background-position: center;
-    margin-top: 600px;
-
-
+.azul2 {
+  background-image: url("fondo-azul-degradado.jpg"); // Reemplaza 'tu-imagen-de-fondo.jpg' con la URL de tu imagen
+  background-size: cover; // Ajusta el tamaño de la imagen de fondo
+  background-position: center;
+  margin-top: 600px;
 }
 
 .azul {
-    background-image: url('fondo-azul-degradado.jpg'); // Reemplaza 'tu-imagen-de-fondo.jpg' con la URL de tu imagen
-    background-size: cover; // Ajusta el tamaño de la imagen de fondo
-    background-position: center;
-    
-  }
-  
-  .homestyle {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    padding: 2rem;
-    color: #fafafa;
-    max-width: 1250px; // Ajusta el ancho máximo según tus necesidades
-    margin: 0;
-
-
-
-    
-  
-    .hometext {
-      h1 {
-        position: relative;
-        font-size: 2em;
-        letter-spacing: 15px;
-        color: #0e3742;
-        text-align: center;
-        -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
-        line-height: 1.2em;
-        text-transform: uppercase;
-        outline: none;
-        animation: text 3s linear infinite;
-        margin-top: 20px;
-        margin-bottom: 90px;
-        /* white-space: nowrap; */
-      }
-      ::selection {
-        color: currentColor;
-        background-color: #03bcf422;
-      }
-      @keyframes text {
-        0%,
-        18%,
-        20%,
-        50.1%,
-        60%,
-        65.1%,
-        80%,
-        90.1%,
-        92% {
-          color: #0e3742;
-          text-shadow: 0 0 5px #0e3742;
-        }
-        18.1%,
-        20.1%,
-        50%,
-        60.1%,
-        65%,
-        80.1%,
-        90%,
-        92.1%,
-        100% {
-          color: #ffffff;
-          text-shadow: 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4,
-            0 0 80px #03bcf4, 0 0 160px #03bcf4;
-        }
-
-    }
-  
-      .caca {
-        margin-left: 45px;
-        font-size: 3rem;
-        font-weight: bold;
-        
-      }
-      .caca2{
-
-        color: #03bcf4;
-      }
-
-    
-    }
-  
-    .fotoemo {
-      width: 100%; // Cambia height por width para que no haya margen a la derecha
-      max-width: 250px; // Ajusta el ancho máximo de la imagen según tus necesidades
-      height: auto; // Añade height: auto; para mantener la proporción de la imagen
-      border-radius: 50%;
-      border: 1vh solid #232d3622;
-     /*  border: 2px solid #03bcf4; */
-      margin-top: 50px;
-  
-      animation: float 6s ease-in-out infinite; // Agrega la animación float aquí
-    }
-  
-    @media (min-width: 1044px) {
-      // Estilos para pantallas grandes (dos columnas)
-      flex-direction: row;
-
-      .fotoemo {
-            max-width: 400px; /* Reduzca el tamaño de la imagen en pantallas más pequeñas */
-        }
-
-        .caca {
-          
-            margin-left: 45px;
-            font-size: 3rem;
-            font-weight: bold;
-            white-space: nowrap;
-          }
-  
-      .hometext {
-        width: 48%; // Ajusta el ancho de la columna de texto según tus necesidades
-        text-align: left; // Alinea el texto a la izquierda en pantallas grandes
-      }
-      .flicker {
-        font-size: 1.2rem;
-        text-align: left;
-        position: relative;
-        width: 700px;
-      }
-    
-    }
-      
-
-
-  }
-  
-  @keyframes float {
-    0% {
-      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-      transform: translateY(0px);
-    }
-    50% {
-      box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
-      transform: translateY(-20px);
-    }
-    100% {
-      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-      transform: translateY(0px);
-    }
- 
-
-
-
+  background-image: url("fondo-azul-degradado.jpg"); // Reemplaza 'tu-imagen-de-fondo.jpg' con la URL de tu imagen
+  background-size: cover; // Ajusta el tamaño de la imagen de fondo
+  background-position: center;
 }
-  
- 
- 
+
+.homestyle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  padding: 2rem;
+  color: #fafafa;
+  /* max-width: 1250px;  */
+  margin: 0;
+
+  .hometext {
+    h1 {
+      position: relative;
+      font-size: 2em;
+      letter-spacing: 15px;
+      color: #0e3742;
+      text-align: center;
+      -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+      line-height: 1.2em;
+      text-transform: uppercase;
+      outline: none;
+      animation: text 3s linear infinite;
+      margin-top: 20px;
+      margin-bottom: 90px;
+      /* white-space: nowrap; */
+    }
+    ::selection {
+      color: currentColor;
+      background-color: #03bcf422;
+    }
+    @keyframes text {
+      0%,
+      18%,
+      20%,
+      50.1%,
+      60%,
+      65.1%,
+      80%,
+      90.1%,
+      92% {
+        color: #0e3742;
+        text-shadow: 0 0 5px #0e3742;
+      }
+      18.1%,
+      20.1%,
+      50%,
+      60.1%,
+      65%,
+      80.1%,
+      90%,
+      92.1%,
+      100% {
+        color: #ffffff;
+        text-shadow: 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4,
+          0 0 80px #03bcf4, 0 0 160px #03bcf4;
+      }
+    }
+
+    .caca {
+      /*  margin-left: 45px; */
+      font-size: 3rem;
+      font-weight: bold;
+      text-align: left;
+    }
+    .caca2 {
+      color: #03bcf4;
+    }
+  }
+
+  .fotoemo {
+    width: 100%; // Cambia height por width para que no haya margen a la derecha
+    max-width: 250px; // Ajusta el ancho máximo de la imagen según tus necesidades
+    height: auto; // Añade height: auto; para mantener la proporción de la imagen
+    border-radius: 50%;
+    border: 1vh solid #232d3622;
+    /*  border: 2px solid #03bcf4; */
+    margin-top: 50px;
+
+    animation: float 6s ease-in-out infinite; // Agrega la animación float aquí
+  }
+
+  @media (min-width: 1200px) {
+    // Estilos para pantallas grandes (dos columnas)
+    flex-direction: row;
+
+    .fotoemo {
+      max-width: 400px; /* Reduzca el tamaño de la imagen en pantallas más pequeñas */
+    }
+
+    .caca {
+      margin-left: 45px;
+      font-size: 3rem;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .hometext {
+      width: 48%; // Ajusta el ancho de la columna de texto según tus necesidades
+      text-align: left; // Alinea el texto a la izquierda en pantallas grandes
+    }
+    .flicker {
+      font-size: 1.2rem;
+      text-align: left;
+      position: relative;
+      width: 700px;
+    }
+  }
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translateY(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translateY(0px);
+  }
+}
+
+.flicker {
+  font-size: 1.4rem;
+  font-weight: bold;
+  position: relative;
+  margin: 1rem auto;
+  color: #fffefe61;
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#e6e6e6),
+      to(#1d1c1c),
+      color-stop(0.8, #ffffff)
+    )
+    no-repeat;
+  background: gradient(
+      linear,
+      left top,
+      right top,
+      from(#222),
+      to(#222),
+      color-stop(0.8, #fff)
+    )
+    no-repeat;
+  background-size: 110px 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: flick 10.5s infinite;
+  width: auto;
+  margin-top: 50px;
+  margin-left: 40px;
+}
+@keyframes flick {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+
+@media (max-width: 850px) {
+  /* Estilos para pantallas más pequeñas */
 
   .flicker {
-    font-size: 1.4rem;
+    font-size: 1.4rem; /* Ajusta el tamaño de fuente para pantallas pequeñas */
+    margin-left: 0; /* Elimina el espaciado izquierdo en pantallas pequeñas */
+  }
+
+  .caca2,
+  .caca3,
+  .caca {
+    font-size: 2rem;
     font-weight: bold;
-    position: relative;
-    margin: 1rem auto;
-    color: #fffefe61;
-    background: -webkit-gradient(linear, left top, right top, from(#e6e6e6), to(#1d1c1c), color-stop(0.8, #ffffff)) no-repeat;
-    background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.8, #fff)) no-repeat;
-    background-size: 110px 100%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    animation: flick 10.5s infinite;
-    width: auto;
-    margin-top: 50px;
-    margin-left: 40px;
   }
-  @keyframes flick {
-    0% {
-      background-position: top left;
-    }
-    100% {
-      background-position: top right;
-    }
-  }
+
+
+
+
   
-  @media (max-width: 850px) {
-    /* Estilos para pantallas más pequeñas */
-    .flicker {
-      font-size: 1.4rem; /* Ajusta el tamaño de fuente para pantallas pequeñas */
-      margin-left: 0; /* Elimina el espaciado izquierdo en pantallas pequeñas */
-
-    }
-
-
-    
-      
-    
-    .caca2 , .caca3 {
-          
-      margin: 0;
-      font-size: 2rem;
-      font-weight: bold;
-      
-    }
-    
-
 }
-  
 
- 
 .button {
   margin-top: 30px;
   display: inline-block;
-  padding: .75rem 1.25rem;
+  padding: 0.75rem 1.25rem;
   border-radius: 5rem;
   /* color: darken(#03bcf4, 90%); */
-  color:  #03bcf4;
+  color: #03bcf4;
   text-transform: uppercase;
   font-weight: bolder;
   font-size: 1rem;
-  letter-spacing: .15rem;
-  transition: all .3s;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s;
   position: relative;
   overflow: hidden;
   z-index: 1;
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -252,21 +225,21 @@ font-weight: bold;
     z-index: -2;
   }
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     width: 0%;
     height: 100%;
     /* background-color: darken(#03bcf4, 45%); */
-    background-color: #03bcf4; 
-    transition: all .3s;
+    background-color: #03bcf4;
+    transition: all 0.3s;
     border-radius: 5rem;
     z-index: -1;
   }
   &:hover {
     color: #03bcf4;
-    color:#030000;
+    color: #030000;
     font-weight: bolder;
     &:before {
       width: 100%;
@@ -274,65 +247,45 @@ font-weight: bold;
   }
 }
 
-  
-
-
-
-/* 
-
-.azul{
-    background-image: url('fondo-azul-degradado.jpg'); // Reemplaza 'tu-imagen-de-fondo.jpg' con la URL de tu imagen
-    background-size: cover; // Ajusta el tamaño de la imagen de fondo
-    background-position: center; 
-  
-
+@media (min-height: 800px) {
+  .homestyle {
+    padding: 4.85rem;
+  }
 }
 
-
-.homestyle {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    padding: 2rem;
-    color: #fafafa;
-    max-width: 1100px; // Ajusta el ancho máximo según tus necesidades
-    margin: 0;
-    
-    
-  
-    .hometext {
-        
-
-      h1 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-      }
-  
-      .caca {
-        font-size: 3rem;
-        font-weight: bold;
-        white-space: nowrap;
-        
-      }
+@media screen and (max-width: 415px) {
+  .homestyle {
+    padding: 1.5rem;
+    text-align: left;
+    .caca2.caca2,
+    .caca3,
+    .caca {
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: 1.8rem;
     }
-  
-    .fotoemo {
-      width: 100%; // Cambia height por width para que no haya margen a la derecha
-      max-width: 500px; // Ajusta el ancho máximo de la imagen según tus necesidades
-      height: auto; // Añade height: auto; para mantener la proporción de la imagen
-      border-radius: 50%;
-      border: 1vh solid #232d3622;
-    }
-  
-    @media (min-width: 768px) {
-      // Estilos para pantallas grandes (dos columnas)
-      flex-direction: row;
-  
-      .hometext {
-        width: 48%; // Ajusta el ancho de la columna de texto según tus necesidades
-        text-align: left; // Alinea el texto a la izquierda en pantallas grandes
-      }
+
+    .flicker {
+      text-align: center;
     }
   }
-   */
+
+  .imagenfoto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; 
+
+  }
+}
+
+@media screen and (min-width: 1241px) {
+
+  .imagenfoto { 
+    padding-right: 5rem;
+
+  }
+
+
+
+}

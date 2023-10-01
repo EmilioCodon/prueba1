@@ -1,10 +1,13 @@
 import React from "react";
 import { account } from "../appwriteConfig";
+import { useAuth } from "../utils/AuthContex";
 import { useState, useEffect } from "react";
 import { FaUserCheck } from "react-icons/fa"
+import AccessDenied from "./denied";
 
 const Profile = () => {
   const [userinfo, setUserinfo] = useState();
+  const { user, logoutUser } = useAuth();
 
   // APPWRITE CONFIGURATION
   useEffect(() => {
@@ -23,7 +26,7 @@ const Profile = () => {
   return (
     
     <div className="azul3">
-   
+     {user ? (
       <div className="custom-container-tu">
         
         <h1 className="custom-title-tu">
@@ -45,8 +48,11 @@ const Profile = () => {
           <i className="custom-text-tu">user info loading...</i>
         )}
       
-      </div>
-      
+      </div> ) : (
+        <div>
+          <AccessDenied />
+        </div>
+      )}
     </div>
   
   );

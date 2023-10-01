@@ -1,6 +1,6 @@
 /* tu-archivo-de-estilos.scss */
 
-.azul3{
+.azul33{
   background-image: url('fondo-azul-degradado.jpg'); // Reemplaza 'tu-imagen-de-fondo.jpg' con la URL de tu imagen
   background-size: cover; // Ajusta el tamaño de la imagen de fondo
   background-position: center;
@@ -9,15 +9,18 @@
   padding-top: 50px;
   padding-bottom: 50px;
   
+  
 
 
 }
 
+
+
 .custom-container-tu-otro {
     
-    width: 400px;
-    max-width: 500px;
-    max-height: 600px; /* Ajusta el ancho máximo según tus necesidades */
+    
+    max-width: 400px;
+    max-height: 600px;/* Ajusta el ancho máximo según tus necesidades */
      
     margin: auto;
     padding: 2rem;
@@ -94,5 +97,22 @@
 
     &:hover {
       color: #03bcf4;
+    }
+  }
+
+  @media (min-height: 800px) {
+    .azul33 {
+      height: 69vh; /* Aumenta la altura en pantallas más altas */
+      padding-top: 90px;
+    }
+  }
+
+
+
+
+    @media (max-width: 415px) {
+      .custom-container-tu-otro {
+        width: 90%;
+      
     }
   }

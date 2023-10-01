@@ -151,6 +151,7 @@ function Navbar() {
         </div>
       ) : (
         <div className="barra">
+           
           <h3>
             Emilio<span className="highlight">´s</span> Portfolio
           </h3>

@@ -1,6 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useAuth } from "../utils/AuthContex";
+import { Link } from "react-router-dom";
+import AccessDenied from "./denied";
 
 export const Users = () => {
+  const { user, logoutUser } = useAuth();
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -82,8 +87,6 @@ export const Users = () => {
     }
   };
 
-
-
   const editUser = async (id) => {
     const resp = await fetch(
       `https://emiliocodon.pythonanywhere.com/user/${id}`,
@@ -104,7 +107,6 @@ export const Users = () => {
     setEmail(data.email);
     setPassword(data.password);
     nameInput.current.focus();
-
   };
 
   useEffect(() => {
@@ -113,80 +115,90 @@ export const Users = () => {
 
   return (
     <div className="azul3">
-      <h3 className="custom-title2">Leave your visit here</h3>
-      <div className="row">
-        <div className="col-md-4">
-          <form onSubmit={handleSubmit} className="card card-body">
-            <div className="form-group">
-              <input
-                type="text"
-                onChange={(e) => setName(e.target.value)}
-                value={name}
-                className="form-control"
-                placeholder="Name"
-                ref={nameInput}
-                autoFocus
-              />
+      {user ? (
+        <div>
+          <h3 className="custom-title2">Leave your visit here</h3>
+          <div className="row">
+            <div className="col-md-4">
+              <form onSubmit={handleSubmit} className="card card-body">
+                <div className="form-group">
+                  <input
+                    type="text"
+                    onChange={(e) => setName(e.target.value)}
+                    value={name}
+                    className="form-control"
+                    placeholder="Name"
+                    ref={nameInput}
+                    autoFocus
+                  />
+                </div>
+                <div className="form-group">
+                  <input
+                    type="email"
+                    onChange={(e) => setEmail(e.target.value)}
+                    value={email}
+                    className="form-control"
+                    placeholder="User's Email"
+                  />
+                </div>
+                <div className="form-group">
+                  <input
+                    type="text"
+                    onChange={(e) => setPassword(e.target.value)}
+                    value={password}
+                    className="form-control"
+                    placeholder="User's Enterprise"
+                  />
+                </div>
+                <button className="button3">
+                  {editing ? "Update" : "Create"}
+                </button>
+              </form>
             </div>
-            <div className="form-group">
-              <input
-                type="email"
-                onChange={(e) => setEmail(e.target.value)}
-                value={email}
-                className="form-control"
-                placeholder="User's Email"
-              />
+            <div className="col-md-6">
+              <div className="table-wrapper ">
+                <table className="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Enterprise</th>
+                      <th>Operations</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {users.map((user) => (
+                      <tr key={user.id}>
+                        <td>{user.name}</td>
+                        <td>{user.email}</td>
+                        <td>{user.password}</td>
+                        <td>
+                          <button
+                            className="button2"
+                            onClick={(e) => editUser(user.id)}
+                          >
+                            Edit
+                          </button>
+                          <button
+                            className="button2"
+                            onClick={(e) => deleteUser(user.id)}
+                          >
+                            Delete
+                          </button>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
-            <div className="form-group">
-              <input
-                type="text"
-                onChange={(e) => setPassword(e.target.value)}
-                value={password}
-                className="form-control"
-                placeholder="User's Enterprise"
-              />
-            </div>
-            <button className="button3">{editing ? "Update" : "Create"}</button>
-          </form>
-        </div>
-        <div className="col-md-6">
-          <div className="table-wrapper ">
-            <table className="table table-striped">
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Email</th>
-                  <th>Enterprise</th>
-                  <th>Operations</th>
-                </tr>
-              </thead>
-              <tbody>
-                {users.map((user) => (
-                  <tr key={user.id}>
-                    <td>{user.name}</td>
-                    <td>{user.email}</td>
-                    <td>{user.password}</td>
-                    <td>
-                      <button
-                        className="button2"
-                        onClick={(e) => editUser(user.id)}
-                      >
-                        Edit
-                      </button>
-                      <button
-                        className="button2"
-                        onClick={(e) => deleteUser(user.id)}
-                      >
-                        Delete
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
           </div>
         </div>
-      </div>
+      ) : (
+        <div>
+          <AccessDenied />
+        </div>
+      )}
     </div>
   );
 };
