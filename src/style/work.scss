@@ -12,13 +12,13 @@ $custom-badge-background: #f00909;
   box-shadow: 0px 0px 10px rgba(27, 20, 20, 0.5); 
   color: #fafafa; */
 
-  max-width: 1640px;
+  /* max-width: 1640px; */
   margin: auto;
   padding: 4rem;
   background: linear-gradient(to bottom, #111111, #1b1b1b);
   box-shadow: 0px 0px 10px rgba(27, 20, 20, 0.5);
   color: #fafafa;
-  background-image: url('fondo-azul-degradado.jpg'); // Reemplaza 'tu-imagen-de-fondo.jpg' con la URL de tu imagen
+  background-image: url('../../static/assets/fondo-azul-degradado.jpg'); // Reemplaza 'tu-imagen-de-fondo.jpg' con la URL de tu imagen
   background-size: cover; // Ajusta el tamaño de la imagen de fondo
   background-position: center; 
   
@@ -234,7 +234,7 @@ $custom-badge-background: #f00909;
 @media screen and (max-width: 415px) {
 
   .custom-title {
-    font-size: 40px;
+    font-size: 30px;
 
 
 
@@ -247,7 +247,7 @@ $custom-badge-background: #f00909;
   }
   
 
-  .custom-filter-row{
+/*   .custom-filter-row{
     margin-top: 1rem;
     border: 4px solid white;
     border-radius: 10px;
@@ -255,10 +255,42 @@ $custom-badge-background: #f00909;
     grid-template-columns: 1fr 1fr;
     padding: 0;
     align-items: baseline;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
+    
+     
+  }
+ */
+
+    .custom-filter-row{
+    margin-top: 1rem;
+    
+    border-radius: 10px;
+    display: flex;
+    padding: 0;
+    align-items:center;
+    padding-bottom: 2rem;
+    
      
   }
 
+  .custom-button {
+    padding: 0.5rem;
+
+  }
+
+  .custom-filter-text {
+  font-size: 20px;
+}
+
+.custom-button-group {
+
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  justify-content:center; /* Centra los botones horizontalmente */
+  padding: 0
+
+}
 
   
 

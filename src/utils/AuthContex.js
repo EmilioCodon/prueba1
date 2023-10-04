@@ -30,6 +30,7 @@ export const AuthProvider = ({ children }) => {
      
     } catch (error) {
       console.log(error);
+      alert("An error occurred while creating the user. Please try again. ");
     }
 
     setLoading(false);
@@ -57,6 +58,7 @@ export const AuthProvider = ({ children }) => {
       setUser(accountDetails);
       history.push('/profile');
     } catch (error) {
+      alert("An error occurred while creating the user. Please try again. Password must be 8 characters");
       console.error(error);
     }
 
@@ -68,7 +70,7 @@ export const AuthProvider = ({ children }) => {
       let accountDetails = await account.get();
       setUser(accountDetails);
     } catch (error) {}
-
+    
     setLoading(false);
   };
 

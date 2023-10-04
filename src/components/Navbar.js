@@ -113,9 +113,11 @@ function Navbar() {
       {user ? (
         <div className="barra">
           <div className="logo">
-            <h3>
-              Emilio<span className="highlight">´s</span> Portfolio
-            </h3>
+          <h3>
+          
+          Emilio<span className="highlight"><Link className="highlight" to="/" onClick={handleLinkClick}>´s</Link></span> Portfolio
+          
+        </h3>
             <button className="out" onClick={logoutUser}>
               <FaSignInAlt />
             </button>
@@ -153,8 +155,11 @@ function Navbar() {
         <div className="barra">
            
           <h3>
-            Emilio<span className="highlight">´s</span> Portfolio
+          
+            Emilio<span className="highlight"><Link className="highlight" to="/" onClick={handleLinkClick}>´s</Link></span> Portfolio
+            
           </h3>
+          
           <nav ref={navRef} className={isNavOpen ? "responsive_nav" : ""}>
             <Link to="/" onClick={handleLinkClick}>
               Home

@@ -21,7 +21,7 @@ const Footer = () => {
 
           {/* 2 column  */}
           <div className="footer-social">
-            <h3>Follows Me</h3>
+            <h3>Follow Me</h3>
             <div className="footer-social--icons">
               <div>
                 <a

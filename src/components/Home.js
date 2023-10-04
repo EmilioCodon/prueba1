@@ -1,6 +1,6 @@
 import React from "react";
 import Typical from "react-typical";
-import foto from "./foto.jpg";
+import foto from "../../static/assets/foto.jpg";
 
 const steps = [
   " Emilio Codon 👋",
